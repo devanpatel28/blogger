@@ -15,8 +15,8 @@ class FirebaseOperations {
 
   static Stream<QuerySnapshot> fetchTransactions() // static method that we can use it without creating object it's the class method not object method so without creating objcet we can use it
   {
-    CollectionReference transcation = db.collection("transactions");
-    return transcation.snapshots();
+    CollectionReference blg = db.collection("blogs");
+    return blg.snapshots();
   }
   static deleteTranscation(String id) {
     DocumentReference docRef = db.collection("transactions").doc(id);
